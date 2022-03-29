@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="6dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.99316007" />
+
+
+    <!--
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        tools:srcCompat="@tools:sample/avatars"></ImageView>
+        -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="?attr/colorSecondary"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+
+        android:layout_margin="10dp"
+        android:elevation="10dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintStart_toStartOf="@id/card_view"
+        tools:srcCompat="@tools:sample/avatars"/>
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="50dp"
+        android:layout_height="26dp"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="Nom"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/idf"
+        app:layout_constraintTop_toTopOf="@id/image">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/prenom"
+        android:layout_width="103dp"
+        android:layout_height="26dp"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:fontFamily="serif-monospace"
+        android:text=" Prenom"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/nom"
+        app:layout_constraintTop_toTopOf="@id/image">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/idf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image">
+
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ingred_logo"
+        android:layout_width="40dp"
+        android:layout_height="28dp"
+        android:layout_margin="20dp"
+
+        android:background="?attr/colorSecondary"
+        android:elevation="10dp"
+        android:src="@drawable/gende"
+        app:layout_constraintBottom_toBottomOf="@id/nom"
+        app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        app:layout_constraintTop_toTopOf="@id/time_logo"></ImageView>
+
+    <TextView
+        android:id="@+id/sexe"
+        android:layout_width="72dp"
+        android:layout_height="24dp"
+        android:layout_margin="20dp"
+        android:elevation="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="Homme"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/time_logo"
+        app:layout_constraintStart_toEndOf="@id/ingred_logo"
+        app:layout_constraintTop_toBottomOf="@+id/prenom">
+
+
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/time_logo"
+        android:layout_width="47dp"
+        android:layout_height="42dp"
+        android:layout_margin="12dp"
+        android:background="?attr/colorSecondary"
+        android:elevation="10dp"
+        android:src="@drawable/blue"
+        app:layout_constraintBottom_toBottomOf="@id/card_view"
+        app:layout_constraintStart_toEndOf="@id/image"></ImageView>
+
+    <TextView
+        android:id="@+id/ville"
+        android:layout_width="109dp"
+        android:layout_height="28dp"
+        android:layout_margin="5dp"
+        android:elevation="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="yy"
+        android:textColor="@color/black"
+
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintStart_toEndOf="@id/time_logo">
+
+
+    </TextView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

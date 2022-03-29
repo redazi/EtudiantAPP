@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="villes">
+        <item>casablanca</item>
+        <item>marrakech</item>
+        <item>safi</item>
+        <item>dakar</item>
+
+
+
+
+
+
+    </string-array>
+</resources>
